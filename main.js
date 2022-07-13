@@ -23,3 +23,25 @@ class SchoolStudent extends Student{
 }
 let show1 = new SchoolStudent("lil",34,5,122312);
 console.log(show1.getSomeDetails());
+
+class MainCar{
+    constructor(numberOfWheels,engine,color){
+        this.numberOfWheels = numberOfWheels;
+        this.engine = engine;
+        this.color = color;
+    }
+    returnTheDetails(){
+        return `Number of wheels:${this.numberOfWheels}Max engine:${this.engine}Color:${this.color}`
+    }
+}
+let myNewCar = new MainCar(4,1600,"white");
+console.log(myNewCar.returnTheDetails());
+
+class Tracks extends MainCar{
+    constructor(numberOfWheels,engine,color,year){
+        super(numberOfWheels,engine,color);
+        this.year = year;
+    }
+}
+
+
